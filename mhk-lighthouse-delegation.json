@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.ManagedServices/registrationDefinitions",
+      "apiVersion": "2019-09-01",
+      "name": "97099b84-7213-4f39-a5e2-7540e62e4854",
+      "properties": {
+        "registrationDefinitionName": "MHK Delegated Access - 3 Tiers",
+        "description": "Simplified Azure Lighthouse delegation for 3 access levels",
+        "managedByTenantId": "21923c55-1f99-4c2b-a90c-90a071c6ef3a",
+        "authorizations": [
+          {
+            "principalId": "8e7a8bb9-15c3-4631-92f5-ffe544d6fd34",
+            "principalIdDisplayName": "MHK-Tier1-Admins",
+            "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+          },
+          {
+            "principalId": "8e7a8bb9-15c3-4631-92f5-ffe544d6fd34",
+            "principalIdDisplayName": "MHK-Tier1-Admins",
+            "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/f1a07417-d97a-45cb-824c-7a7467783830"
+          },
+          {
+            "principalId": "79df3b4c-8692-4a37-8e81-43da49d12d2c",
+            "principalIdDisplayName": "MHK-Tier2-Technicians",
+            "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+          },
+          {
+            "principalId": "80ce9623-7e9a-430b-9b5f-d9e7fde92a6b",
+            "principalIdDisplayName": "MHK-Tier3-Support",
+            "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7"
+          }
+        ]
+      }
+    }
+  ]
+}
